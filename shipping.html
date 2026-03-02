@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Returns | Zenith</title>
+    <meta name="description"
+        content="Zenith shipping options, delivery timeframes, and hassle-free 30-day returns policy.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">Zenith.</div>
+            <div class="search-bar-container" style="visibility: hidden;">
+                <!-- Hidden on subpages for alignment -->
+                <input type="text" class="search-input">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Go to Store"
+                    onclick="window.location.href='index.html'">
+                    <ion-icon name="bag-outline"></ion-icon>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse Categories</div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Category</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="apps-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">All Products</span><span
+                                    class="drop-link-sub">Browse our full collection</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="shirt-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">T-Shirts</span><span
+                                    class="drop-link-sub">Graphic & solidarity tees</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="body-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Hoodies & Crewnecks</span><span
+                                    class="drop-link-sub">Heavyweight statement fleece</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="football-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Caps & Hats</span><span
+                                    class="drop-link-sub">Dad hats & snapbacks</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="bag-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Accessories</span><span
+                                    class="drop-link-sub">Totes, pins & more</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link"><ion-icon name="bag-check-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Checkout</span><span
+                                    class="drop-link-sub">Complete your order</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">Featured</span>
+                        <a href="index.html" class="drop-promo"><span class="drop-promo-tag">🔥 Best Seller</span><span
+                                class="drop-promo-title">Palestine Solidarity Tee</span><span class="drop-promo-sub">$39
+                                —
+                                Organic cotton, embroidered</span></a>
+                        <a href="index.html" class="drop-promo"
+                            style="background: linear-gradient(135deg, #10b981, #0284c7); margin-top: 0.75rem;"><span
+                                class="drop-promo-tag">🆕 New Arrival</span><span class="drop-promo-title">Earth Cause
+                                Hoodie</span><span class="drop-promo-sub">$79 — Organic cotton, globe
+                                embroidery</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="sparkles-outline"></ion-icon> New Arrivals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="pricetag-outline"></ion-icon> Deals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link"><ion-icon
+                                name="chatbubble-ellipses-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">FAQ</span><span class="drop-link-sub">Common questions
+                                    answered</span></span></a>
+                        <a href="shipping.html" class="drop-link"><ion-icon name="airplane-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Shipping & Returns</span><span
+                                    class="drop-link-sub">Delivery info & 30-day returns</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link"><ion-icon
+                                name="mail-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Contact Us</span><span
+                                    class="drop-link-sub">support@zenith.store</span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="business-outline"></ion-icon> Company
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="terms.html" class="drop-link"><ion-icon name="document-text-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Terms & Conditions</span><span
+                                    class="drop-link-sub">Our usage agreement</span></span></a>
+                        <a href="privacy.html" class="drop-link"><ion-icon
+                                name="shield-checkmark-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Privacy Policy</span><span class="drop-link-sub">How we
+                                    handle your data</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <span class="drawer-section-title">Shop</span>
+            <a href="index.html" class="drawer-link"><ion-icon name="apps-outline"></ion-icon> All Products</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="shirt-outline"></ion-icon> T-Shirts</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="body-outline"></ion-icon> Hoodies & Crewnecks</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍 Climate</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚 Education</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Legal</span>
+            <a href="terms.html" class="drawer-link"><ion-icon name="document-text-outline"></ion-icon> Terms &
+                Conditions</a>
+            <a href="privacy.html" class="drawer-link"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy
+                Policy</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" id="drawer-theme-btn">
+                <ion-icon name="moon-outline" id="drawer-theme-icon"></ion-icon> Dark Mode
+            </button>
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <a href="index.html" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon> Back to Store
+        </a>
+        <h1>Shipping &amp; Returns</h1>
+        <p class="subtitle">Free shipping on every order. A 30-day no-questions-asked return policy.</p>
+    </section>
+
+    <div class="page-container">
+
+        <!-- SHIPPING -->
+        <div class="page-section">
+            <h2><ion-icon name="airplane-outline"></ion-icon> Shipping Options</h2>
+            <p>We offer several delivery options to fit your schedule. All domestic orders include <strong>free standard
+                    shipping</strong>.</p>
+
+            <table class="shipping-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Delivery Time</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Standard Shipping</td>
+                        <td>3–7 Business Days</td>
+                        <td><span class="badge-free">FREE</span></td>
+                    </tr>
+                    <tr>
+                        <td>Express Shipping</td>
+                        <td>1–2 Business Days</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>International Standard</td>
+                        <td>7–14 Business Days</td>
+                        <td>$14.99</td>
+                    </tr>
+                    <tr>
+                        <td>International Express</td>
+                        <td>3–5 Business Days</td>
+                        <td>$29.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="navigate-outline"></ion-icon> Order Tracking</h2>
+            <p>Once your order ships, you'll receive a shipping confirmation email with a tracking number. Tracking is
+                usually active within <strong>24 hours</strong> of dispatch. You can track your parcel directly on our
+                carrier's website at any time.</p>
+            <p>If you haven't received tracking information within 3 business days of your order, please contact us at
+                <a href="mailto:support@zenith.store" style="color: var(--accent-color);">support@zenith.store</a>.
+            </p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="time-outline"></ion-icon> Processing Time</h2>
+            <p>All orders are processed within <strong>1–2 business days</strong> (Monday–Friday, excluding public
+                holidays). Orders placed after 2pm EST will typically be processed the next business day.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="globe-outline"></ion-icon> International Shipping</h2>
+            <p>We ship to over 40 countries worldwide. Please note:</p>
+            <ul>
+                <li>Import duties, taxes, and customs fees are the recipient's responsibility</li>
+                <li>International delivery times may vary depending on customs clearance</li>
+                <li>Some regions may not be eligible for express service</li>
+                <li>Tracking may have fewer updates once the parcel leaves our country</li>
+            </ul>
+        </div>
+
+        <!-- RETURNS -->
+        <div class="page-section" style="margin-top: 3.5rem;">
+            <h2><ion-icon name="refresh-circle-outline"></ion-icon> Returns Policy</h2>
+            <p>Not happy? No problem. We offer a <strong>30-day hassle-free return</strong> on all items. Items must be:
+            </p>
+            <ul>
+                <li>Returned within 30 days of the delivery date</li>
+                <li>In original, unused condition with all accessories included</li>
+                <li>In original packaging (box, inserts, manuals)</li>
+            </ul>
+            <p>Items that are damaged through misuse, or custom/personalized products, are not eligible for return.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="list-outline"></ion-icon> How to Return an Item</h2>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="tl-left">
+                        <div class="tl-num">1</div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <h4>Initiate Your Return</h4>
+                        <p>Email <a href="mailto:returns@zenith.store"
+                                style="color: var(--accent-color);">returns@zenith.store</a> with your order number and
+                            reason for return. We'll respond with a prepaid return label within 24 hours.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="tl-left">
+                        <div class="tl-num">2</div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <h4>Pack Your Item</h4>
+                        <p>Securely pack your item in its original packaging. Attach the prepaid return label to the
+                            outside of the box. Drop off at any authorized carrier location.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="tl-left">
+                        <div class="tl-num">3</div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <h4>We Receive & Inspect</h4>
+                        <p>Once we receive your return, our team will inspect the item within 1–2 business days. You'll
+                            receive an email once the inspection is complete.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="tl-left">
+                        <div class="tl-num">4</div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <h4>Refund Issued</h4>
+                        <p>Your refund will be processed to the original payment method within 2–3 business days after
+                            inspection. Depending on your bank, funds typically appear within 3–5 additional days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="swap-horizontal-outline"></ion-icon> Exchanges</h2>
+            <p>We don't offer direct exchanges at this time. If you'd like a different product, please return your
+                original item for a refund and place a new order.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="alert-circle-outline"></ion-icon> Damaged or Defective Items</h2>
+            <p>If your item arrives damaged or is defective, contact us at <a href="mailto:support@zenith.store"
+                    style="color: var(--accent-color);">support@zenith.store</a> within <strong>48 hours</strong> of
+                delivery. Please include:</p>
+            <ul>
+                <li>Your order number</li>
+                <li>A description of the issue</li>
+                <li>Clear photos of the damage or defect</li>
+            </ul>
+            <p>We'll arrange a replacement or full refund — no return required for damaged goods.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Need help with a return?</strong><br>
+            Email <a href="mailto:returns@zenith.store" style="color: var(--accent-color);">returns@zenith.store</a> or
+            reach our support team at <a href="mailto:support@zenith.store"
+                style="color: var(--accent-color);">support@zenith.store</a>. We're here Mon–Fri, 9am–6pm EST.
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium tech for those who demand the best. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="index.html">All Products</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme & Drawer
+        const mainThemeBtn = document.getElementById('theme-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
+        const drawerClose = document.getElementById('drawer-close');
+        const drawerThemeBtn = document.getElementById('drawer-theme-btn');
+        const drawerThemeIcon = document.getElementById('drawer-theme-icon');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        function syncTheme() {
+            const dark = document.body.classList.contains('dark-theme');
+            if (mainThemeBtn) mainThemeBtn.innerHTML = dark ? '<ion-icon name="sunny-outline"></ion-icon>' : '<ion-icon name="moon-outline"></ion-icon>';
+            if (drawerThemeIcon) drawerThemeIcon.setAttribute('name', dark ? 'sunny-outline' : 'moon-outline');
+            if (drawerThemeBtn) {
+                let textNode = drawerThemeBtn.querySelector('ion-icon').nextSibling;
+                if (textNode) textNode.textContent = dark ? ' Light Mode' : ' Dark Mode';
+            }
+        }
+        syncTheme();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+            syncTheme();
+        }
+
+        if (mainThemeBtn) mainThemeBtn.addEventListener('click', toggleTheme);
+        if (drawerThemeBtn) drawerThemeBtn.addEventListener('click', toggleTheme);
+
+        function openDrawer() {
+            mobileDrawer.classList.add('open');
+            navOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.remove('open');
+            navOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburger) hamburger.addEventListener('click', openDrawer);
+        if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+        if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDrawer();
+        });
+    </script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

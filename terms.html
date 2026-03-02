@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Zenith</title>
+    <meta name="description" content="Terms and Conditions governing the use of Zenith and its services.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">Zenith.</div>
+            <div class="search-bar-container" style="visibility: hidden;">
+                <!-- Hidden on subpages for alignment -->
+                <input type="text" class="search-input">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Go to Store"
+                    onclick="window.location.href='index.html'">
+                    <ion-icon name="bag-outline"></ion-icon>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse Categories</div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Category</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="apps-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">All Products</span><span
+                                    class="drop-link-sub">Browse our full collection</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="shirt-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">T-Shirts</span><span
+                                    class="drop-link-sub">Graphic & solidarity tees</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="body-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Hoodies & Crewnecks</span><span
+                                    class="drop-link-sub">Heavyweight statement fleece</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="football-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Caps & Hats</span><span
+                                    class="drop-link-sub">Dad hats & snapbacks</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="bag-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Accessories</span><span
+                                    class="drop-link-sub">Totes, pins & more</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link"><ion-icon name="bag-check-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Checkout</span><span
+                                    class="drop-link-sub">Complete your order</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">Featured</span>
+                        <a href="index.html" class="drop-promo"><span class="drop-promo-tag">🔥 Best Seller</span><span
+                                class="drop-promo-title">Palestine Solidarity Tee</span><span class="drop-promo-sub">$39
+                                —
+                                Organic cotton, embroidered</span></a>
+                        <a href="index.html" class="drop-promo"
+                            style="background: linear-gradient(135deg, #10b981, #0284c7); margin-top: 0.75rem;"><span
+                                class="drop-promo-tag">🆕 New Arrival</span><span class="drop-promo-title">Earth Cause
+                                Hoodie</span><span class="drop-promo-sub">$79 — Organic cotton, globe
+                                embroidery</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="sparkles-outline"></ion-icon> New Arrivals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="pricetag-outline"></ion-icon> Deals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link"><ion-icon
+                                name="chatbubble-ellipses-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">FAQ</span><span class="drop-link-sub">Common questions
+                                    answered</span></span></a>
+                        <a href="shipping.html" class="drop-link"><ion-icon name="airplane-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Shipping & Returns</span><span
+                                    class="drop-link-sub">Delivery info & 30-day returns</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link"><ion-icon
+                                name="mail-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Contact Us</span><span
+                                    class="drop-link-sub">support@zenith.store</span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="business-outline"></ion-icon> Company
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="terms.html" class="drop-link"><ion-icon name="document-text-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Terms & Conditions</span><span
+                                    class="drop-link-sub">Our usage agreement</span></span></a>
+                        <a href="privacy.html" class="drop-link"><ion-icon
+                                name="shield-checkmark-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Privacy Policy</span><span class="drop-link-sub">How we
+                                    handle your data</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="index.html" class="drawer-link"><ion-icon name="apps-outline"></ion-icon> All Products</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸 Palestine</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩 Sudan</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍 Climate</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚 Education</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Legal</span>
+            <a href="terms.html" class="drawer-link"><ion-icon name="document-text-outline"></ion-icon> Terms &
+                Conditions</a>
+            <a href="privacy.html" class="drawer-link"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy
+                Policy</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" id="drawer-theme-btn">
+                <ion-icon name="moon-outline" id="drawer-theme-icon"></ion-icon> Dark Mode
+            </button>
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <a href="index.html" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon> Back to Store
+        </a>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="subtitle">Please read these terms carefully before using our website or purchasing from Zenith.</p>
+        <span class="meta-tag"><ion-icon name="calendar-outline"></ion-icon> Effective: March 1, 2026</span>
+    </section>
+
+    <div class="page-container">
+
+        <div class="page-section">
+            <h2><ion-icon name="information-circle-outline"></ion-icon> 1. Agreement to Terms</h2>
+            <p>By accessing or using the Zenith website ("Site"), you agree to be bound by these Terms & Conditions and
+                our Privacy Policy. If you do not agree to any part of these terms, you may not use our Site.</p>
+            <p>These terms apply to all visitors, users, and customers. Zenith reserves the right to update these terms
+                at any time. Continued use of the Site after changes constitutes acceptance of the new terms.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="person-outline"></ion-icon> 2. Eligibility</h2>
+            <p>You must be at least 18 years of age to place an order on Zenith. By using the Site and making a
+                purchase, you represent and warrant that you meet this requirement. We reserve the right to refuse
+                service to anyone at our discretion.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="cart-outline"></ion-icon> 3. Products & Pricing</h2>
+            <p>We reserve the right to modify or discontinue products at any time without notice. Prices are displayed
+                in USD and are subject to change without prior notice. We are not responsible for typographical errors
+                in product descriptions or pricing.</p>
+            <p>In the event of a pricing error, we reserve the right to cancel any affected orders and notify customers
+                with a full refund.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="card-outline"></ion-icon> 4. Orders & Payment</h2>
+            <p>By placing an order, you represent that you are authorised to use the payment method provided. All
+                payments are processed securely via our payment gateway. Zenith does not store credit card information.
+            </p>
+            <p>Order acceptance occurs upon dispatch of goods. Zenith reserves the right to refuse or cancel orders at
+                its discretion, including in cases of suspected fraud, prohibited items, or availability issues.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="airplane-outline"></ion-icon> 5. Shipping & Delivery</h2>
+            <p>Delivery timeframes are estimates and not guaranteed. Zenith is not liable for delays caused by shipping
+                carriers, customs, or circumstances beyond our control. Risk of loss and title pass to you upon handoff
+                to the carrier.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="refresh-outline"></ion-icon> 6. Returns & Refunds</h2>
+            <p>Our return policy is detailed on the <a href="shipping.html" style="color: var(--accent-color);">Shipping
+                    & Returns</a> page and forms part of these Terms. By purchasing, you agree to this policy. Refunds
+                are issued to the original payment method only.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="shield-checkmark-outline"></ion-icon> 7. Intellectual Property</h2>
+            <p>All content on the Zenith website — including logos, product images, text, graphics, and software — is
+                the exclusive property of Zenith or its licensors and is protected by copyright, trademark, and other
+                intellectual property laws.</p>
+            <p>You may not reproduce, distribute, modify, or create derivative works from any content on this Site
+                without our express written permission.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="warning-outline"></ion-icon> 8. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, Zenith shall not be liable for any indirect, incidental, special,
+                consequential, or punitive damages arising from your use of the Site or our products. Our total
+                liability shall not exceed the amount paid by you for the applicable order.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="ban-outline"></ion-icon> 9. Prohibited Uses</h2>
+            <p>You agree not to use the Site to:</p>
+            <ul>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Harvest or collect personally identifiable information from other users</li>
+                <li>Transmit unsolicited commercial communications</li>
+                <li>Impersonate Zenith or any third party</li>
+                <li>Engage in any fraudulent or deceptive activity</li>
+                <li>Attempt to gain unauthorised access to any system or network</li>
+            </ul>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="scale-outline"></ion-icon> 10. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York,
+                United States, without regard to conflict of law provisions. Any disputes shall be resolved exclusively
+                in the courts located in New York County.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Questions about our Terms?</strong><br>
+            Contact our legal team at <a href="mailto:legal@zenith.store"
+                style="color: var(--accent-color);">legal@zenith.store</a>. We aim to respond to all inquiries within 5
+            business days.
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium tech for those who demand the best. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="index.html">All Products</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme & Drawer
+        const mainThemeBtn = document.getElementById('theme-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
+        const drawerClose = document.getElementById('drawer-close');
+        const drawerThemeBtn = document.getElementById('drawer-theme-btn');
+        const drawerThemeIcon = document.getElementById('drawer-theme-icon');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        function syncTheme() {
+            const dark = document.body.classList.contains('dark-theme');
+            if (mainThemeBtn) mainThemeBtn.innerHTML = dark ? '<ion-icon name="sunny-outline"></ion-icon>' : '<ion-icon name="moon-outline"></ion-icon>';
+            if (drawerThemeIcon) drawerThemeIcon.setAttribute('name', dark ? 'sunny-outline' : 'moon-outline');
+            if (drawerThemeBtn) {
+                let textNode = drawerThemeBtn.querySelector('ion-icon').nextSibling;
+                if (textNode) textNode.textContent = dark ? ' Light Mode' : ' Dark Mode';
+            }
+        }
+        syncTheme();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+            syncTheme();
+        }
+
+        if (mainThemeBtn) mainThemeBtn.addEventListener('click', toggleTheme);
+        if (drawerThemeBtn) drawerThemeBtn.addEventListener('click', toggleTheme);
+
+        function openDrawer() {
+            mobileDrawer.classList.add('open');
+            navOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.remove('open');
+            navOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburger) hamburger.addEventListener('click', openDrawer);
+        if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+        if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDrawer();
+        });
+    </script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

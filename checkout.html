@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Zenith</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="pages.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">Zenith.</div>
+            <div class="search-bar-container" style="visibility: hidden;">
+                <!-- Hidden on subpages for alignment -->
+                <input type="text" class="search-input">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Go to Store"
+                    onclick="window.location.href='index.html'">
+                    <ion-icon name="bag-outline"></ion-icon>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse Categories</div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Category</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="apps-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">All Products</span><span
+                                    class="drop-link-sub">Browse our full collection</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="shirt-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">T-Shirts</span><span
+                                    class="drop-link-sub">Graphic & solidarity tees</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="body-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Hoodies & Crewnecks</span><span
+                                    class="drop-link-sub">Heavyweight statement fleece</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="football-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Caps & Hats</span><span
+                                    class="drop-link-sub">Dad hats & snapbacks</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="bag-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Accessories</span><span
+                                    class="drop-link-sub">Totes, pins & more</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link"><ion-icon name="bag-check-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Checkout</span><span
+                                    class="drop-link-sub">Complete your order</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">Featured</span>
+                        <a href="index.html" class="drop-promo"><span class="drop-promo-tag">🔥 Best Seller</span><span
+                                class="drop-promo-title">Palestine Solidarity Tee</span><span class="drop-promo-sub">$39
+                                —
+                                Organic cotton, embroidered</span></a>
+                        <a href="index.html" class="drop-promo"
+                            style="background: linear-gradient(135deg, #10b981, #0284c7); margin-top: 0.75rem;"><span
+                                class="drop-promo-tag">🆕 New Arrival</span><span class="drop-promo-title">Earth Cause
+                                Hoodie</span><span class="drop-promo-sub">$79 — Organic cotton, globe
+                                embroidery</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="sparkles-outline"></ion-icon> New Arrivals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="pricetag-outline"></ion-icon> Deals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link"><ion-icon
+                                name="chatbubble-ellipses-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">FAQ</span><span class="drop-link-sub">Common questions
+                                    answered</span></span></a>
+                        <a href="shipping.html" class="drop-link"><ion-icon name="airplane-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Shipping & Returns</span><span
+                                    class="drop-link-sub">Delivery info & 30-day returns</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link"><ion-icon
+                                name="mail-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Contact Us</span><span
+                                    class="drop-link-sub">support@zenith.store</span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="business-outline"></ion-icon> Company
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="terms.html" class="drop-link"><ion-icon name="document-text-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Terms & Conditions</span><span
+                                    class="drop-link-sub">Our usage agreement</span></span></a>
+                        <a href="privacy.html" class="drop-link"><ion-icon
+                                name="shield-checkmark-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Privacy Policy</span><span class="drop-link-sub">How we
+                                    handle your data</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="index.html" class="drawer-link"><ion-icon name="apps-outline"></ion-icon> All Products</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸 Palestine</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩 Sudan</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍 Climate</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚 Education</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Legal</span>
+            <a href="terms.html" class="drawer-link"><ion-icon name="document-text-outline"></ion-icon> Terms &
+                Conditions</a>
+            <a href="privacy.html" class="drawer-link"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy
+                Policy</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" id="drawer-theme-btn">
+                <ion-icon name="moon-outline" id="drawer-theme-icon"></ion-icon> Dark Mode
+            </button>
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <main class="checkout-container">
+        <div class="checkout-form">
+            <h2>Shipping Information</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" required placeholder="123 Zenith Way">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required placeholder="New York">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" required placeholder="10001">
+                    </div>
+                </div>
+
+                <h2>Payment Details</h2>
+                <div class="form-group">
+                    <label for="card">Card Number</label>
+                    <input type="text" id="card" required placeholder="XXXX XXXX XXXX XXXX">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" required placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required placeholder="123">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Complete Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="checkout-items" class="checkout-items">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="summary-totals">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="success-modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for shopping with Zenith. Your premium tech is on its way.</p>
+            <button onclick="window.location.href='index.html'" class="back-home-btn">Return to Store</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium tech for those who demand the best. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="index.html">All Products</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping &amp; Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            const navOverlay = document.getElementById('nav-overlay');
+            const drawerClose = document.getElementById('drawer-close');
+            const drawerThemeBtn = document.getElementById('drawer-theme-btn');
+            const drawerThemeIcon = document.getElementById('drawer-theme-icon');
+            const mainThemeBtn = document.getElementById('theme-toggle');
+
+            function openDrawer() {
+                mobileDrawer.classList.add('open');
+                navOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                mobileDrawer.classList.remove('open');
+                navOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            if (hamburger) hamburger.addEventListener('click', openDrawer);
+            if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+            if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeDrawer();
+            });
+
+            function syncDrawerThemeBtn() {
+                const isDark = document.body.classList.contains('dark-theme');
+                if (drawerThemeIcon) drawerThemeIcon.setAttribute('name', isDark ? 'sunny-outline' : 'moon-outline');
+                if (drawerThemeBtn) {
+                    let textNode = drawerThemeBtn.querySelector('ion-icon').nextSibling;
+                    if (textNode) textNode.textContent = isDark ? ' Light Mode' : ' Dark Mode';
+                }
+            }
+
+            if (mainThemeBtn) {
+                mainThemeBtn.addEventListener('click', () => {
+                    setTimeout(syncDrawerThemeBtn, 50);
+                });
+            }
+            if (drawerThemeBtn) {
+                drawerThemeBtn.addEventListener('click', () => {
+                    if (mainThemeBtn) mainThemeBtn.click();
+                });
+            }
+            syncDrawerThemeBtn();
+        });
+    </script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

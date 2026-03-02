@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Zenith</title>
+    <meta name="description" content="Zenith's Privacy Policy — how we collect, use, and protect your personal data.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">Zenith.</div>
+            <div class="search-bar-container" style="visibility: hidden;">
+                <!-- Hidden on subpages for alignment -->
+                <input type="text" class="search-input">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Go to Store"
+                    onclick="window.location.href='index.html'">
+                    <ion-icon name="bag-outline"></ion-icon>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse Categories</div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Category</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="apps-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">All Products</span><span
+                                    class="drop-link-sub">Browse our full collection</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="shirt-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">T-Shirts</span><span
+                                    class="drop-link-sub">Graphic & solidarity tees</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="body-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Hoodies & Crewnecks</span><span
+                                    class="drop-link-sub">Heavyweight statement fleece</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="index.html" class="drop-link"><ion-icon name="football-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Caps & Hats</span><span
+                                    class="drop-link-sub">Dad hats & snapbacks</span></span></a>
+                        <a href="index.html" class="drop-link"><ion-icon name="bag-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Accessories</span><span
+                                    class="drop-link-sub">Totes, pins & more</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link"><ion-icon name="bag-check-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Checkout</span><span
+                                    class="drop-link-sub">Complete your order</span></span></a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">Featured</span>
+                        <a href="index.html" class="drop-promo"><span class="drop-promo-tag">🔥 Best Seller</span><span
+                                class="drop-promo-title">Palestine Solidarity Tee</span><span class="drop-promo-sub">$39
+                                —
+                                Organic cotton, embroidered</span></a>
+                        <a href="index.html" class="drop-promo"
+                            style="background: linear-gradient(135deg, #10b981, #0284c7); margin-top: 0.75rem;"><span
+                                class="drop-promo-tag">🆕 New Arrival</span><span class="drop-promo-title">Earth Cause
+                                Hoodie</span><span class="drop-promo-sub">$79 — Organic cotton, globe
+                                embroidery</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="sparkles-outline"></ion-icon> New Arrivals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link" onclick="window.location.href='index.html'">
+                    <ion-icon name="pricetag-outline"></ion-icon> Deals
+                </button>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link"><ion-icon
+                                name="chatbubble-ellipses-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">FAQ</span><span class="drop-link-sub">Common questions
+                                    answered</span></span></a>
+                        <a href="shipping.html" class="drop-link"><ion-icon name="airplane-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Shipping & Returns</span><span
+                                    class="drop-link-sub">Delivery info & 30-day returns</span></span></a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link"><ion-icon
+                                name="mail-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Contact Us</span><span
+                                    class="drop-link-sub">support@zenith.store</span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="business-outline"></ion-icon> Company
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="terms.html" class="drop-link"><ion-icon name="document-text-outline"></ion-icon><span
+                                class="drop-link-text"><span class="drop-link-label">Terms & Conditions</span><span
+                                    class="drop-link-sub">Our usage agreement</span></span></a>
+                        <a href="privacy.html" class="drop-link"><ion-icon
+                                name="shield-checkmark-outline"></ion-icon><span class="drop-link-text"><span
+                                    class="drop-link-label">Privacy Policy</span><span class="drop-link-sub">How we
+                                    handle your data</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="index.html" class="drawer-link"><ion-icon name="apps-outline"></ion-icon> All Products</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸 Palestine</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩 Sudan</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍 Climate</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚 Education</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Legal</span>
+            <a href="terms.html" class="drawer-link"><ion-icon name="document-text-outline"></ion-icon> Terms &
+                Conditions</a>
+            <a href="privacy.html" class="drawer-link"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy
+                Policy</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" id="drawer-theme-btn">
+                <ion-icon name="moon-outline" id="drawer-theme-icon"></ion-icon> Dark Mode
+            </button>
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <a href="index.html" class="back-link">
+            <ion-icon name="arrow-back-outline"></ion-icon> Back to Store
+        </a>
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">We respect your privacy. Here's exactly how we handle your personal information.</p>
+        <span class="meta-tag"><ion-icon name="calendar-outline"></ion-icon> Effective: March 1, 2026</span>
+    </section>
+
+    <div class="page-container">
+
+        <div class="page-section">
+            <h2><ion-icon name="information-circle-outline"></ion-icon> 1. Introduction</h2>
+            <p>Zenith ("we", "us", "our") operates this website and is committed to protecting your privacy. This Policy
+                explains what personal data we collect, why we collect it, how it is used, and your rights regarding
+                that data.</p>
+            <p>By using our Site and services, you agree to the collection and use of information in accordance with
+                this Policy.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="document-text-outline"></ion-icon> 2. Information We Collect</h2>
+            <p>We collect the following categories of personal data:</p>
+            <ul>
+                <li><strong>Identity data:</strong> Name, email address, and billing/shipping address</li>
+                <li><strong>Payment data:</strong> Card type and last 4 digits (full card numbers are never stored —
+                    processed via a PCI-DSS compliant gateway)</li>
+                <li><strong>Usage data:</strong> IP address, browser type, pages visited, and referring URL, collected
+                    automatically via cookies and analytics tools</li>
+                <li><strong>Transaction data:</strong> Order history, product preferences, and communications</li>
+            </ul>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="flask-outline"></ion-icon> 3. How We Use Your Data</h2>
+            <p>Your data is used to:</p>
+            <ul>
+                <li>Process and fulfil your orders, including sending confirmation and tracking emails</li>
+                <li>Personalise your shopping experience and product recommendations</li>
+                <li>Comply with legal and regulatory obligations</li>
+                <li>Detect and prevent fraud and unauthorised access</li>
+                <li>Send marketing communications, where you have given explicit consent</li>
+                <li>Improve our website performance and user experience through analytics</li>
+            </ul>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="share-social-outline"></ion-icon> 4. Sharing Your Data</h2>
+            <p>We do not sell or rent your personal data. We share data only with trusted third parties necessary to
+                operate our business:</p>
+            <ul>
+                <li><strong>Payment processors</strong> to securely handle transactions</li>
+                <li><strong>Shipping partners</strong> to deliver your orders</li>
+                <li><strong>Analytics providers</strong> (such as Google Analytics) to understand Site usage</li>
+                <li><strong>Legal authorities</strong> when required by law or valid legal process</li>
+            </ul>
+            <p>All third-party providers are contractually required to uphold the same level of data protection that we
+                apply.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="lock-closed-outline"></ion-icon> 5. Data Security</h2>
+            <p>We implement industry-standard security measures including 256-bit SSL/TLS encryption, firewalls, and
+                access controls to protect your data from unauthorised access, disclosure, alteration, or destruction.
+            </p>
+            <p>No method of transmission over the Internet is 100% secure. While we strive to use commercially
+                acceptable means to protect your data, we cannot guarantee absolute security.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="timer-outline"></ion-icon> 6. Data Retention</h2>
+            <p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was
+                collected, including satisfying legal, accounting, or reporting requirements. Order data is typically
+                retained for 7 years for tax compliance. Marketing consent records are retained until you withdraw
+                consent.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="hand-left-outline"></ion-icon> 7. Your Rights</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Access:</strong> Right to request a copy of the data we hold about you</li>
+                <li><strong>Rectification:</strong> Right to correct inaccurate or incomplete data</li>
+                <li><strong>Erasure ("Right to be Forgotten"):</strong> Request deletion of your personal data</li>
+                <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+                <li><strong>Objection:</strong> Object to processing for direct marketing at any time</li>
+                <li><strong>Withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any
+                    time</li>
+            </ul>
+            <p>To exercise any of these rights, contact us at <a href="mailto:privacy@zenith.store"
+                    style="color: var(--accent-color);">privacy@zenith.store</a>.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon> 8. Cookies</h2>
+            <p>We use cookies and similar tracking technologies to enhance your browsing experience. These include:</p>
+            <ul>
+                <li><strong>Essential cookies:</strong> Required for the Site to function (e.g., your cart contents)
+                </li>
+                <li><strong>Analytics cookies:</strong> Help us understand how users interact with the Site</li>
+                <li><strong>Preference cookies:</strong> Remember your settings, such as dark mode</li>
+            </ul>
+            <p>You can control or disable cookies in your browser settings, though some features may not function
+                correctly without them.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="globe-outline"></ion-icon> 9. International Transfers</h2>
+            <p>Your data may be transferred to and processed in countries outside your own. When we do this, we ensure
+                appropriate safeguards are in place (such as Standard Contractual Clauses) so your data receives the
+                same level of protection as under applicable data protection laws.</p>
+        </div>
+
+        <div class="page-section">
+            <h2><ion-icon name="create-outline"></ion-icon> 10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting
+                the new Policy on this page with an updated effective date. We encourage you to review this page
+                periodically.</p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Data & Privacy Inquiries:</strong><br>
+            For any privacy-related requests or questions, contact our Data Protection Officer at <a
+                href="mailto:privacy@zenith.store" style="color: var(--accent-color);">privacy@zenith.store</a>. We
+            respond to all verified requests within 30 days.
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium tech for those who demand the best. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="index.html">All Products</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping & Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme & Drawer
+        const mainThemeBtn = document.getElementById('theme-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
+        const drawerClose = document.getElementById('drawer-close');
+        const drawerThemeBtn = document.getElementById('drawer-theme-btn');
+        const drawerThemeIcon = document.getElementById('drawer-theme-icon');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        function syncTheme() {
+            const dark = document.body.classList.contains('dark-theme');
+            if (mainThemeBtn) mainThemeBtn.innerHTML = dark ? '<ion-icon name="sunny-outline"></ion-icon>' : '<ion-icon name="moon-outline"></ion-icon>';
+            if (drawerThemeIcon) drawerThemeIcon.setAttribute('name', dark ? 'sunny-outline' : 'moon-outline');
+            if (drawerThemeBtn) {
+                let textNode = drawerThemeBtn.querySelector('ion-icon').nextSibling;
+                if (textNode) textNode.textContent = dark ? ' Light Mode' : ' Dark Mode';
+            }
+        }
+        syncTheme();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+            syncTheme();
+        }
+
+        if (mainThemeBtn) mainThemeBtn.addEventListener('click', toggleTheme);
+        if (drawerThemeBtn) drawerThemeBtn.addEventListener('click', toggleTheme);
+
+        function openDrawer() {
+            mobileDrawer.classList.add('open');
+            navOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.remove('open');
+            navOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburger) hamburger.addEventListener('click', openDrawer);
+        if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+        if (navOverlay) navOverlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDrawer();
+        });
+    </script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith | Premium Tech</title>
+    <meta name="description"
+        content="Discover premium tech products at Zenith. High quality smartwatches, audio, and peripherals.">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- ═══ HEADER ═══ -->
+    <header>
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'">Zenith.</div>
+            <div class="search-bar-container">
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <input type="text" id="search-input" class="search-input" placeholder="Search products...">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Open Cart">
+                    <ion-icon name="bag-outline"></ion-icon>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+
+            <!-- Home -->
+            <div class="nav-item">
+                <a href="index.html" class="nav-link" id="nav-home-link">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a>
+            </div>
+
+            <!-- All Products -->
+            <div class="nav-item">
+                <a href="products.html" class="nav-link">
+                    <ion-icon name="grid-outline"></ion-icon> All Products
+                </a>
+            </div>
+
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse Categories</div>
+
+                    <!-- Col 1: Categories -->
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Cause</span>
+                        <a href="index.html" onclick="setFilter('all')" class="drop-link">
+                            <ion-icon name="apps-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">All Products</span>
+                                <span class="drop-link-sub">Browse our full collection</span>
+                            </span>
+                        </a>
+                        <a href="index.html" onclick="setFilter('palestine')" class="drop-link">
+                            <ion-icon name="flag-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🇵🇸 Palestine</span>
+                                <span class="drop-link-sub">Solidarity tees, caps & hoodies</span>
+                            </span>
+                        </a>
+                        <a href="index.html" onclick="setFilter('sudan')" class="drop-link">
+                            <ion-icon name="flag-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🇸🇩 Sudan</span>
+                                <span class="drop-link-sub">Sudan flag crewneck & tees</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Col 2: More categories -->
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="index.html" onclick="setFilter('climate')" class="drop-link">
+                            <ion-icon name="earth-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🌍 Climate</span>
+                                <span class="drop-link-sub">Earth-cause hoodies & totes</span>
+                            </span>
+                        </a>
+                        <a href="index.html" onclick="setFilter('education')" class="drop-link">
+                            <ion-icon name="school-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">📚 Education</span>
+                                <span class="drop-link-sub">Wear for the right to learn</span>
+                            </span>
+                        </a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link">
+                            <ion-icon name="bag-check-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Checkout</span>
+                                <span class="drop-link-sub">Complete your order</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="drop-col">
+                        <span class="drop-col-label">Featured</span>
+                        <a href="index.html" onclick="setFilter('tshirts')" class="drop-promo">
+                            <span class="drop-promo-tag">🔥 Best Seller</span>
+                            <span class="drop-promo-title">Palestine Solidarity Tee</span>
+                            <span class="drop-promo-sub">$39 — Organic cotton, embroidered</span>
+                        </a>
+                        <a href="index.html" onclick="setFilter('hoodies')" class="drop-promo"
+                            style="background: linear-gradient(135deg, #10b981, #0284c7); margin-top: 0.75rem;">
+                            <span class="drop-promo-tag">🆕 New Arrival</span>
+                            <span class="drop-promo-title">Earth Cause Hoodie</span>
+                            <span class="drop-promo-sub">$79 — Organic cotton, globe embroidery</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Support dropdown -->
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">FAQ</span>
+                                <span class="drop-link-sub">Common questions answered</span>
+                            </span>
+                        </a>
+                        <a href="shipping.html" class="drop-link">
+                            <ion-icon name="airplane-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Shipping & Returns</span>
+                                <span class="drop-link-sub">Delivery info & 30-day returns</span>
+                            </span>
+                        </a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Contact Us</span>
+                                <span class="drop-link-sub">support@zenith.store</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company / Legal dropdown -->
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="business-outline"></ion-icon> Company
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="terms.html" class="drop-link">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Terms & Conditions</span>
+                                <span class="drop-link-sub">Our usage agreement</span>
+                            </span>
+                        </a>
+                        <a href="privacy.html" class="drop-link">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Privacy Policy</span>
+                                <span class="drop-link-sub">How we handle your data</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <a href="index.html" class="drawer-link"><ion-icon name="home-outline"></ion-icon> Home</a>
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="products.html" class="drawer-link">
+                <ion-icon name="grid-outline"></ion-icon> All Products
+            </a>
+            <a href="products.html?filter=palestine" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸
+                Palestine</a>
+            <a href="products.html?filter=sudan" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩
+                Sudan</a>
+            <a href="products.html?filter=climate" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍
+                Climate</a>
+            <a href="products.html?filter=education" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚
+                Education</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Legal</span>
+            <a href="terms.html" class="drawer-link"><ion-icon name="document-text-outline"></ion-icon> Terms &
+                Conditions</a>
+            <a href="privacy.html" class="drawer-link"><ion-icon name="shield-checkmark-outline"></ion-icon> Privacy
+                Policy</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" id="drawer-theme-btn">
+                <ion-icon name="moon-outline" id="drawer-theme-icon"></ion-icon> Dark Mode
+            </button>
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">New Collection 2026</div>
+            <h1>Wear Your Values</h1>
+            <p>Premium solidarity clothing — t-shirts, hoodies & caps — printed with logos and symbols of the causes
+                that matter most.</p>
+            <div class="hero-btns">
+                <button class="hero-cta"
+                    onclick="document.querySelector('.filters-container').scrollIntoView({behavior:'smooth'})">Shop Now
+                    <ion-icon name="arrow-forward-outline"></ion-icon></button>
+                <button class="hero-cta-ghost" onclick="document.querySelector('[data-filter=hoodies]').click()">Explore
+                    Hoodies</button>
+            </div>
+        </div>
+        <div class="hero-badge-group">
+            <div class="hero-stat"><span class="stat-num">8+</span><span class="stat-label">Products</span></div>
+            <div class="hero-stat"><span class="stat-num">4.9★</span><span class="stat-label">Rating</span></div>
+            <div class="hero-stat"><span class="stat-num">Free</span><span class="stat-label">Shipping</span></div>
+        </div>
+    </section>
+
+    <!-- ═══ MISSION SECTION ═══ -->
+    <section class="mission-section">
+        <div class="mission-inner">
+
+            <!-- Top: headline + description -->
+            <div class="mission-header">
+                <div class="mission-tag">
+                    <ion-icon name="heart-outline"></ion-icon> Wear With Purpose
+                </div>
+                <h2 class="mission-title">Fashion That Speaks<br>for What Matters</h2>
+                <p class="mission-desc">
+                    We design premium clothing — t-shirts, hoodies, caps — printed with the logos and symbols of
+                    the causes closest to our hearts. Wear your solidarity. Make it visible. Style shouldn't be silent.
+                </p>
+            </div>
+
+            <!-- 3 value pillars -->
+            <div class="mission-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">
+                        <ion-icon name="shirt-outline"></ion-icon>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Ethically sourced, sustainably made. Our garments are built to last — because the planet is a
+                        cause too.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">
+                        <ion-icon name="megaphone-outline"></ion-icon>
+                    </div>
+                    <h3>Wear Your Voice</h3>
+                    <p>Every logo, every flag, every symbol on our clothing is a statement. Let the world know where
+                        you stand without saying a word.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                    <h3>Spread Awareness</h3>
+                    <p>When people see you wear it, they ask about it. That conversation
+                        is the beginning of real change.</p>
+                </div>
+            </div>
+
+            <!-- Causes we support -->
+            <div class="causes-block">
+                <h3 class="causes-title">Causes We Stand With</h3>
+                <div class="causes-grid">
+                    <div class="cause-card cause-palestine">
+                        <div class="cause-flag">🇵🇸</div>
+                        <div class="cause-info">
+                            <div class="cause-name">Palestine</div>
+                            <div class="cause-desc">We stand with the people of Palestine. Wear the flag, the crescent,
+                                the watermelon — symbols that speak louder than words.</div>
+                        </div>
+                        <div class="cause-pct"><ion-icon name="shirt-outline"></ion-icon><span>on our clothes</span>
+                        </div>
+                    </div>
+                    <div class="cause-card cause-sudan">
+                        <div class="cause-flag">🇸🇩</div>
+                        <div class="cause-info">
+                            <div class="cause-name">Sudan</div>
+                            <div class="cause-desc">The crisis in Sudan deserves to be seen. Our Sudan crewneck carries
+                                the flag and keeps the conversation alive.</div>
+                        </div>
+                        <div class="cause-pct"><ion-icon name="shirt-outline"></ion-icon><span>on our clothes</span>
+                        </div>
+                    </div>
+                    <div class="cause-card cause-education">
+                        <div class="cause-flag">📚</div>
+                        <div class="cause-info">
+                            <div class="cause-name">Education</div>
+                            <div class="cause-desc">Knowledge is power. We champion the right to education for every
+                                child, no matter where they were born.</div>
+                        </div>
+                        <div class="cause-pct"><ion-icon name="shirt-outline"></ion-icon><span>on our clothes</span>
+                        </div>
+                    </div>
+                    <div class="cause-card cause-climate">
+                        <div class="cause-flag">🌍</div>
+                        <div class="cause-info">
+                            <div class="cause-name">Climate Justice</div>
+                            <div class="cause-desc">The Earth is a cause. Our globe-printed pieces are a daily reminder
+                                that we must stand up for the planet.</div>
+                        </div>
+                        <div class="cause-pct"><ion-icon name="shirt-outline"></ion-icon><span>on our clothes</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="causes-note">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    We show solidarity through what we wear. Every piece carries a cause logo that makes your support
+                    visible.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ CAUSE AWARENESS STORIES ═══ -->
+    <section class="stories-section">
+        <div class="stories-inner">
+            <div class="stories-header">
+                <span class="section-tag" style="background:#dc2626;">Their Stories</span>
+                <h2 class="stories-title">The World Needs Your Voice</h2>
+                <p class="stories-desc">These crises are real. These people are real. The least we can do is make sure
+                    the world doesn't look away.</p>
+            </div>
+
+            <!-- PALESTINE -->
+            <div class="story-card" id="cause-palestine">
+                <div class="story-flag-stripe story-stripe-palestine"></div>
+                <div class="story-body">
+                    <div class="story-header-row">
+                        <span class="story-emoji">🇵🇸</span>
+                        <div>
+                            <h3 class="story-name">Palestine</h3>
+                            <span class="story-status" style="background:rgba(220,38,38,.12); color:#dc2626;">● Ongoing
+                                Conflict</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        For decades, Palestinians have lived under occupation, displacement, and siege. Since October
+                        2023, the war in Gaza has become one of the deadliest humanitarian crises in modern history —
+                        over 30,000 lives lost, hospitals bombed, entire neighbourhoods reduced to rubble. Families torn
+                        apart. Children who never knew a day without war.
+                    </p>
+                    <p class="story-text">
+                        The Palestinian people have been fighting for their right to exist, to return to their land, to
+                        live in dignity. Their flag, their olive trees, their keffiyeh — these are not just symbols.
+                        They are survival.
+                    </p>
+                    <div class="story-call">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <strong>How you can help:</strong> Amplify their voices. Boycott complicit brands. Support
+                        humanitarian organisations. And wear the flag — because visibility matters.
+                    </div>
+                    <a href="products.html?filter=palestine" class="story-btn story-btn-palestine">
+                        <ion-icon name="shirt-outline"></ion-icon> Shop Palestine Collection
+                    </a>
+                </div>
+            </div>
+
+            <!-- UYGHURS -->
+            <div class="story-card" id="cause-uyghur">
+                <div class="story-flag-stripe story-stripe-uyghur"></div>
+                <div class="story-body">
+                    <div class="story-header-row">
+                        <span class="story-emoji">☪️</span>
+                        <div>
+                            <h3 class="story-name">Uyghurs — East Turkestan</h3>
+                            <span class="story-status" style="background:rgba(37,99,235,.12); color:#2563eb;">● Ongoing
+                                Oppression</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        More than one million Uyghur Muslims have been detained in what China calls "re-education camps"
+                        in the Xinjiang region. Families are separated without warning. Mosques are demolished. Speaking
+                        your language or praying can get you imprisoned. Surveillance is total — facial recognition, DNA
+                        collection, forced sterilisation.
+                    </p>
+                    <p class="story-text">
+                        The world's largest internment of an ethnic group since World War II is happening right now —
+                        yet most people have never heard of it. The Uyghur people are losing their culture, their faith,
+                        their freedom, and their children. Silence is complicity.
+                    </p>
+                    <div class="story-call">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <strong>How you can help:</strong> Speak about it. Pressure governments to act. Support Uyghur
+                        diaspora organisations. Share the truth.
+                    </div>
+                    <a href="products.html" class="story-btn story-btn-uyghur">
+                        <ion-icon name="megaphone-outline"></ion-icon> Spread Awareness
+                    </a>
+                </div>
+            </div>
+
+            <!-- DR CONGO -->
+            <div class="story-card" id="cause-congo">
+                <div class="story-flag-stripe story-stripe-congo"></div>
+                <div class="story-body">
+                    <div class="story-header-row">
+                        <span class="story-emoji">🇨🇩</span>
+                        <div>
+                            <h3 class="story-name">DR Congo</h3>
+                            <span class="story-status" style="background:rgba(234,179,8,.12); color:#b45309;">●
+                                Forgotten Crisis</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        The Democratic Republic of Congo has been called the "world's most neglected crisis." For over
+                        25 years, armed militias and foreign-backed rebel groups have terrorised civilians in the east
+                        of the country. Millions have been displaced. Women and children are the primary targets of
+                        systematic sexual violence used as a weapon of war.
+                    </p>
+                    <p class="story-text">
+                        The DRC holds some of the world's richest mineral reserves — coltan, cobalt, gold. The very
+                        minerals in our phones and laptops. The world profits from Congo's resources while its people
+                        bleed. Over 6 million displaced. More than 500,000 lives lost. Almost no international coverage.
+                    </p>
+                    <div class="story-call">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <strong>How you can help:</strong> Say their names. Question where your minerals come from.
+                        Support Congolese-led organisations fighting for justice and protection.
+                    </div>
+                    <a href="products.html" class="story-btn story-btn-congo">
+                        <ion-icon name="megaphone-outline"></ion-icon> Spread Awareness
+                    </a>
+                </div>
+            </div>
+
+            <!-- SUDAN -->
+            <div class="story-card" id="cause-sudan">
+                <div class="story-flag-stripe story-stripe-sudan"></div>
+                <div class="story-body">
+                    <div class="story-header-row">
+                        <span class="story-emoji">🇸🇩</span>
+                        <div>
+                            <h3 class="story-name">Sudan</h3>
+                            <span class="story-status" style="background:rgba(220,38,38,.12); color:#dc2626;">● Active
+                                Civil War</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        Since April 2023, Sudan has been torn apart by a brutal civil war between the Sudanese Armed
+                        Forces and the paramilitary Rapid Support Forces. In a matter of months, it became the world's
+                        largest displacement crisis — over 10 million people forced from their homes, with no end in
+                        sight.
+                    </p>
+                    <p class="story-text">
+                        Khartoum, once a thriving capital, is now a battlefield. Entire cities have been ethnically
+                        cleansed. Famine is spreading. Hospitals are targeted. Women are raped in the streets. The
+                        international community has largely looked away from what experts warn could become genocide.
+                        Sudan is screaming — and the world is mostly silent.
+                    </p>
+                    <div class="story-call">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <strong>How you can help:</strong> Share their story. Pressure world leaders to act. Donate to
+                        Sudan emergency relief. Wear the flag and keep the conversation alive.
+                    </div>
+                    <a href="products.html?filter=sudan" class="story-btn story-btn-sudan">
+                        <ion-icon name="shirt-outline"></ion-icon> Shop Sudan Collection
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <div class="overlay" id="cart-overlay"></div>
+
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" id="close-cart" aria-label="Close Cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items injected via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout <ion-icon
+                    name="arrow-forward-outline"></ion-icon></button>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium solidarity clothing for those who dare to take a stand. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="products.html">All Products</a>
+                    <a href="products.html?filter=palestine">🇵🇸 Palestine</a>
+                    <a href="products.html?filter=sudan">🇸🇩 Sudan</a>
+                    <a href="products.html?filter=climate">🌍 Climate</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping Policy</a>
+                    <a href="shipping.html">Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

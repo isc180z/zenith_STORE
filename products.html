@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Zenith</title>
+    <meta name="description"
+        content="Browse all solidarity clothing at Zenith. Palestine, Sudan, Climate & Education cause wear.">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- ═══ HEADER ═══ -->
+    <header>
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'">Zenith.</div>
+            <div class="search-bar-container">
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <input type="text" id="search-input" class="search-input" placeholder="Search products...">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Open Cart">
+                    <ion-icon name="bag-outline"></ion-icon>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="header-nav" id="header-nav">
+            <!-- Home -->
+            <div class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a>
+            </div>
+
+            <!-- All Products (active) -->
+            <div class="nav-item">
+                <a href="products.html" class="nav-link"
+                    style="color:var(--accent-color); border-bottom-color:var(--accent-color);">
+                    <ion-icon name="grid-outline"></ion-icon> All Products
+                </a>
+            </div>
+
+            <!-- Shop (mega menu) -->
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="storefront-outline"></ion-icon> Shop
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown wide">
+                    <div class="drop-col-title">Browse by Cause</div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">By Cause</span>
+                        <a href="products.html" class="drop-link">
+                            <ion-icon name="apps-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">All Products</span>
+                                <span class="drop-link-sub">Browse our full collection</span>
+                            </span>
+                        </a>
+                        <a href="products.html?filter=palestine" class="drop-link">
+                            <ion-icon name="flag-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🇵🇸 Palestine</span>
+                                <span class="drop-link-sub">Solidarity tees, caps &amp; hoodies</span>
+                            </span>
+                        </a>
+                        <a href="products.html?filter=sudan" class="drop-link">
+                            <ion-icon name="flag-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🇸🇩 Sudan</span>
+                                <span class="drop-link-sub">Sudan flag crewneck &amp; tees</span>
+                            </span>
+                        </a>
+                        <a href="products.html?filter=congo" class="drop-link">
+                            <ion-icon name="flag-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🇨🇩 Congo</span>
+                                <span class="drop-link-sub">DR Congo solidarity collection</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="drop-col">
+                        <span class="drop-col-label">&nbsp;</span>
+                        <a href="products.html?filter=uyghur" class="drop-link">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">☪️ Uyghurs</span>
+                                <span class="drop-link-sub">East Turkestan solidarity wear</span>
+                            </span>
+                        </a>
+                        <a href="products.html?filter=climate" class="drop-link">
+                            <ion-icon name="earth-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">🌍 Climate</span>
+                                <span class="drop-link-sub">Earth-cause hoodies &amp; totes</span>
+                            </span>
+                        </a>
+                        <div class="drop-divider"></div>
+                        <a href="checkout.html" class="drop-link">
+                            <ion-icon name="bag-check-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Checkout</span>
+                                <span class="drop-link-sub">Complete your order</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="nav-item">
+                <button class="nav-link">
+                    <ion-icon name="help-circle-outline"></ion-icon> Support
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <div class="dropdown">
+                    <div class="drop-col">
+                        <a href="faq.html" class="drop-link">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">FAQ</span>
+                                <span class="drop-link-sub">Common questions answered</span>
+                            </span>
+                        </a>
+                        <a href="shipping.html" class="drop-link">
+                            <ion-icon name="airplane-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Shipping &amp; Returns</span>
+                                <span class="drop-link-sub">Delivery info &amp; 30-day returns</span>
+                            </span>
+                        </a>
+                        <div class="drop-divider"></div>
+                        <a href="mailto:support@zenith.store" class="drop-link">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span class="drop-link-text">
+                                <span class="drop-link-label">Contact Us</span>
+                                <span class="drop-link-sub">support@zenith.store</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <a href="index.html" class="drawer-link"><ion-icon name="home-outline"></ion-icon> Home</a>
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="products.html" class="drawer-link"><ion-icon name="grid-outline"></ion-icon> All Products</a>
+            <a href="products.html?filter=palestine" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸
+                Palestine</a>
+            <a href="products.html?filter=sudan" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩
+                Sudan</a>
+            <a href="products.html?filter=congo" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇨🇩
+                Congo</a>
+            <a href="products.html?filter=uyghur" class="drawer-link"><ion-icon name="person-outline"></ion-icon> ☪️
+                Uyghurs</a>
+            <a href="products.html?filter=climate" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍
+                Climate</a>
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &amp;
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-check-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══ PAGE HEADER ═══ -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <span class="section-tag">Our Collection</span>
+            <h1 class="page-hero-title">All Products</h1>
+            <p class="page-hero-desc">Every piece you wear carries a cause logo — your solidarity, made visible.</p>
+        </div>
+    </div>
+
+    <!-- ═══ "OUR PRODUCTS" QUICK CARDS ═══ -->
+    <section class="our-products-section" style="border-top:none; padding-top:2.5rem;">
+        <div class="our-products-inner">
+            <div class="our-products-grid" id="our-products-grid">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- REQUEST / RECLAMATION FORM -->
+    <section class="request-section" id="request-section">
+      <div class="request-inner">
+        <div class="request-info">
+          <span class="section-tag" style="background:#009736;">Get in Touch</span>
+          <h2 class="request-info-title">Have a Request<br>or a Reclamation?</h2>
+          <p class="request-info-desc">We are here to listen. Report an issue, suggest a new product, or share your thoughts — fill the form and we reply within 48 hours.</p>
+          <div class="request-features">
+            <div class="req-feature">
+              <div class="req-feature-icon" style="background:rgba(0,151,54,.12);color:#009736;"><ion-icon name="shirt-outline"></ion-icon></div>
+              <div><div class="req-feature-title">Product Requests</div><div class="req-feature-sub">Tell us what you would like  a new design, cause, or item type.</div></div>
+            </div>
+            <div class="req-feature">
+              <div class="req-feature-icon" style="background:rgba(220,38,38,.10);color:#dc2626;"><ion-icon name="alert-circle-outline"></ion-icon></div>
+              <div><div class="req-feature-title">Reclamations</div><div class="req-feature-sub">Wrong size, damaged item, late delivery? We will make it right.</div></div>
+            </div>
+            <div class="req-feature">
+              <div class="req-feature-icon" style="background:rgba(37,99,235,.10);color:#2563eb;"><ion-icon name="time-outline"></ion-icon></div>
+              <div><div class="req-feature-title">48h Response</div><div class="req-feature-sub">Every message is read by a real person. We reply within 48 hours.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="request-form-wrap">
+          <form class="request-form" id="request-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="req-name">Full Name <span class="req-star">*</span></label>
+                <input type="text" id="req-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="req-email">Email Address <span class="req-star">*</span></label>
+                <input type="email" id="req-email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="req-type">Request Type <span class="req-star">*</span></label>
+                <select id="req-type" name="type" required>
+                  <option value="" disabled selected>Choose a type...</option>
+                  <option value="reclamation">Reclamation  Report an Issue</option>
+                  <option value="product-request">Product Request  Suggest a New Item</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="req-cause">Related Collection</label>
+                <select id="req-cause" name="cause">
+                  <option value="">All / Not Specific</option>
+                  <option value="palestine">Palestine</option>
+                  <option value="sudan">Sudan</option>
+                  <option value="congo">DR Congo</option>
+                  <option value="uyghur">Uyghurs</option>
+                  <option value="climate">Climate</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="req-subject">Subject <span class="req-star">*</span></label>
+              <input type="text" id="req-subject" name="subject" placeholder="Brief description of your request" required>
+            </div>
+            <div class="form-group">
+              <label for="req-message">Your Message <span class="req-star">*</span></label>
+              <textarea id="req-message" name="message" rows="5" placeholder="Describe your request or issue in detail. For product requests, include design, colour, and item type..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="req-order">Order Number <span class="form-optional">(optional  for reclamations)</span></label>
+              <input type="text" id="req-order" name="order" placeholder="e.g. #ZEN-20260302">
+            </div>
+            <button type="submit" class="form-submit-btn" id="form-submit-btn">
+              <ion-icon name="send-outline"></ion-icon> Send Message
+            </button>
+            <div class="form-success" id="form-success" style="display:none;">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+              <strong>Message sent!</strong> We will get back to you within 48 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="product-modal" id="product-modal">
+            <button class="modal-close" id="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-inner" id="modal-inner">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay"></div>
+
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" id="close-cart" aria-label="Close Cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items injected via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout <ion-icon
+                    name="arrow-forward-outline"></ion-icon></button>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Zenith.</div>
+                <p>Premium solidarity clothing for those who dare to take a stand. Free shipping on all orders.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="products.html">All Products</a>
+                    <a href="products.html?filter=palestine">🇵🇸 Palestine</a>
+                    <a href="products.html?filter=sudan">🇸🇩 Sudan</a>
+                    <a href="products.html?filter=congo">🇨🇩 Congo</a>
+                    <a href="products.html?filter=uyghur">☪️ Uyghurs</a>
+                    <a href="products.html?filter=climate">🌍 Climate</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping Policy</a>
+                    <a href="shipping.html">Returns</a>
+                    <a href="mailto:support@zenith.store">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zenith. All rights reserved. &nbsp;|&nbsp; <a href="terms.html"
+                    style="color: var(--text-muted);">Terms</a> &nbsp;|&nbsp; <a href="privacy.html"
+                    style="color: var(--text-muted);">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Set initial filter from URL BEFORE script.js renders anything
+        (function () {
+            const f = new URLSearchParams(window.location.search).get('filter');
+            if (f) window.__initialFilter = f;
+        })();
+    </script>
+    <script src="script.js"></script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>

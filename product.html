@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Zenith</title>
+    <meta name="description" content="Solidarity clothing that makes your support visible.">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* ── PAGE-LEVEL PRODUCT LAYOUT ── */
+        .product-page {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .product-img-wrap {
+            background: var(--bg-color);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .product-img-wrap img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .product-img-wrap:hover img {
+            transform: scale(1.04);
+        }
+
+        .product-badge-top {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent-color);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Details column */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .product-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.83rem;
+            color: var(--text-muted);
+        }
+
+        .product-breadcrumb a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .product-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .product-cause-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .product-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+        }
+
+        .product-price-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+        }
+
+        .product-free-ship {
+            font-size: 0.82rem;
+            background: rgba(22, 163, 74, 0.1);
+            color: #16a34a;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .product-desc {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .product-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.93rem;
+            color: var(--text-muted);
+        }
+
+        .product-features li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .product-add-btn {
+            flex: 1;
+            min-width: 180px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .product-add-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        .product-checkout-btn {
+            flex: 1;
+            min-width: 140px;
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .product-checkout-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Cause badge */
+        .cause-badge-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.1rem;
+            background: var(--bg-color);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .cause-badge-row ion-icon {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        /* Related products */
+        .related-section {
+            max-width: 1100px;
+            margin: 4rem auto 5rem;
+            padding: 0 5%;
+        }
+
+        .related-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .related-card-body {
+            padding: 1rem;
+        }
+
+        .related-card-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .related-card-price {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.05rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-page {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 1.5rem auto;
+            }
+
+            .product-title {
+                font-size: 1.7rem;
+            }
+
+            .product-img-wrap img {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ═══ HEADER ═══ -->
+    <header>
+        <div class="header-top">
+            <div class="logo" onclick="window.location.href='index.html'">Zenith.</div>
+            <div class="search-bar-container">
+                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                <input type="text" id="search-input" class="search-input" placeholder="Search products..."
+                    oninput="window.location.href='index.html'">
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="moon-outline"></ion-icon>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Open Cart">
+                    <ion-icon name="bag-outline"></ion-icon>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">Zenith.</div>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <span class="drawer-section-title">Shop by Cause</span>
+            <a href="index.html" class="drawer-link"><ion-icon name="apps-outline"></ion-icon> All Products</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇵🇸 Palestine</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="flag-outline"></ion-icon> 🇸🇩 Sudan</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="earth-outline"></ion-icon> 🌍 Climate</a>
+            <a href="index.html" class="drawer-link"><ion-icon name="school-outline"></ion-icon> 📚 Education</a>
+            <div class="drawer-divider"></div>
+            <span class="drawer-section-title">Support</span>
+            <a href="faq.html" class="drawer-link"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> FAQ</a>
+            <a href="shipping.html" class="drawer-link"><ion-icon name="airplane-outline"></ion-icon> Shipping &
+                Returns</a>
+            <a href="mailto:support@zenith.store" class="drawer-link"><ion-icon name="mail-outline"></ion-icon> Contact
+                Us</a>
+        </div>
+        <div class="drawer-footer">
+            <button class="drawer-action-btn" onclick="window.location.href='checkout.html'">
+                <ion-icon name="bag-check-outline"></ion-icon> Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══ PRODUCT PAGE ═══ -->
+    <div class="product-page" id="product-page">
+        <!-- Loaded by JS -->
+    </div>
+
+    <!-- ═══ RELATED PRODUCTS ═══ -->
+    <section class="related-section">
+        <h2 class="related-title">You Might Also Like</h2>
+        <div class="related-grid" id="related-grid">
+            <!-- Loaded by JS -->
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" id="close-cart"><ion-icon name="close-outline"></ion-icon></button>
+        </div>
+        <div class="cart-items" id="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout
+                <ion-icon name="arrow-forward-outline"></ion-icon></button>
+        </div>
+    </aside>
+    <div class="modal-overlay" id="cart-overlay"></div>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // ── CAUSE COLOR MAP ──
+        const causeColors = {
+            palestine: '#009736',
+            sudan: '#D21034',
+            education: '#d97706',
+            climate: '#0891b2'
+        };
+
+        const causeLabels = {
+            palestine: '🇵🇸 Palestine',
+            sudan: '🇸🇩 Sudan',
+            education: '📚 Education',
+            climate: '🌍 Climate'
+        };
+
+        // ── LOAD PRODUCT FROM URL PARAM ──
+        function loadProduct() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get('id'));
+            const product = productsData.find(p => p.id === id);
+
+            if (!product) {
+                document.getElementById('product-page').innerHTML = `
+                    <div style="grid-column:1/-1; text-align:center; padding: 4rem;">
+                        <h2>Product not found</h2>
+                        <a href="index.html" style="color:var(--accent-color); font-weight:600;">← Back to Shop</a>
+                    </div>`;
+                return;
+            }
+
+            document.title = `${product.name} | Zenith`;
+            const color = causeColors[product.category] || 'var(--accent-color)';
+            const causeLabel = causeLabels[product.category] || product.category;
+
+            document.getElementById('product-page').innerHTML = `
+                <div class="product-img-wrap">
+                    ${product.badge ? `<div class="product-badge-top" style="background:${color}">${product.badge}</div>` : ''}
+                    <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/600x460/e2e8f0/64748b?text=Image'">
+                </div>
+                <div class="product-details">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">Home</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <a href="index.html?filter=${product.category}">${causeLabel}</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <span>${product.name}</span>
+                    </div>
+                    <div class="product-cause-tag" style="color:${color}">
+                        <ion-icon name="flag-outline"></ion-icon> ${causeLabel}
+                    </div>
+                    <h1 class="product-title">${product.name}</h1>
+                    <div class="product-price-row">
+                        <div class="product-price" style="color:${color}">$${product.price}</div>
+                        <div class="product-free-ship"><ion-icon name="airplane-outline"></ion-icon> Free Shipping</div>
+                    </div>
+                    <p class="product-desc">${product.desc}</p>
+                    <ul class="product-features">
+                        ${product.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                    <div class="cause-badge-row">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span>This piece wears the <strong>${causeLabel}</strong> logo — your solidarity, made visible.</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="product-add-btn" style="background:${color}" onclick="addToCart(${product.id})">
+                            <ion-icon name="bag-add-outline"></ion-icon> Add to Cart
+                        </button>
+                        <button class="product-checkout-btn" onclick="addToCart(${product.id}); window.location.href='checkout.html'">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>`;
+
+            // Load related products (same cause)
+            const related = productsData.filter(p => p.id !== id && p.category === product.category).slice(0, 4);
+            const grid = document.getElementById('related-grid');
+            if (related.length === 0) {
+                grid.closest('.related-section').style.display = 'none';
+            } else {
+                grid.innerHTML = related.map(p => `
+                    <a href="product.html?id=${p.id}" class="related-card">
+                        <img src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/400x200/e2e8f0/64748b?text=Image'">
+                        <div class="related-card-body">
+                            <div class="related-card-name">${p.name}</div>
+                            <div class="related-card-price" style="color:${causeColors[p.category] || 'var(--accent-color)'}">$${p.price}</div>
+                        </div>
+                    </a>`).join('');
+            }
+        }
+
+        loadProduct();
+
+        // Handle URL filter param on back-navigation
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const filter = params.get('filter');
+            if (filter) {
+                sessionStorage.setItem('pendingFilter', filter);
+            }
+        });
+    </script>
+    <script>window.scrollTo(0,0);</script>
+</body>
+
+</html>
